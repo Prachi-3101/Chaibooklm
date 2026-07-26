@@ -3,7 +3,7 @@ import getEmbedding from "../embedding/embedding-service.js";
 
 const retrieveChunks = async (question, notebookId) => {
   // Create embedding for user's question
-  const embedding = await getEmbedding(question);
+  const embedding = await getEmbedding(question, "query");
 
   // Search Pinecone
   const results = await index.query({
