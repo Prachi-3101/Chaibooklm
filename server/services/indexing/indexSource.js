@@ -39,7 +39,7 @@ console.log("====================");
   console.log("TOTAL CHUNKS:", chunks.length);
 console.log(chunks);
 
-  const embeddings = await getEmbedding(chunks);
+  const embeddings = await getEmbedding(chunks, "passage");
 
   const vectors = chunks.map((chunk, i) => ({
     id: uuid(),
